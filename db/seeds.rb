@@ -5,12 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-User.create!(name:  "Michael Vasquez")
-User.create!(name:  "John Loureiro")
+u1 = User.create!(name:  "Michael Vasquez")
+u2 = User.create!(name:  "John Loureiro")
 
-p1 = Project.create!(name: "Capstone Project")
-p1.tasks.create!().save
+p1 = u1.projects.create!(name: "Capstone Project")
+p1.tasks.create!()
 
 
-p2 = Project.create!(name: "Super Saiyan Goku Project")
+p2 = u2.projects.create!(name: "Super Saiyan Goku Project")
 p2.tasks.create!()
